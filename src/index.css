@@ -2,95 +2,105 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Cosmic Watch - NASA Mission Control Design System */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Space Dark Theme */
+    --background: 240 10% 4%;
+    --foreground: 210 40% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 240 10% 6%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 240 10% 6%;
+    --popover-foreground: 210 40% 98%;
 
-    --primary: 222.2 47.4% 11.2%;
+    --primary: 142 76% 36%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 217 33% 17%;
+    --accent-foreground: 210 40% 98%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 142 76% 36%;
 
     --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 98%;
+    /* Cosmic Watch Custom Colors */
+    --space-dark: 240 10% 4%;
+    --space-darker: 240 10% 2%;
+    --panel-bg: 220 20% 8%;
+    --panel-border: 220 20% 15%;
+    
+    --status-critical: 0 84% 60%;
+    --status-high: 25 95% 53%;
+    --status-moderate: 48 96% 53%;
+    --status-low: 142 76% 36%;
+    
+    --glow-green: 142 76% 36%;
+    --glow-red: 0 84% 60%;
+    --glow-amber: 25 95% 53%;
+    --glow-blue: 217 91% 60%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 240 10% 4%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 142 76% 36%;
+    --sidebar-primary-foreground: 210 40% 98%;
+    --sidebar-accent: 217 33% 17%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 217 33% 17%;
+    --sidebar-ring: 142 76% 36%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
+    --background: 240 10% 4%;
     --foreground: 210 40% 98%;
 
-    --card: 222.2 84% 4.9%;
+    --card: 240 10% 6%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 222.2 84% 4.9%;
+    --popover: 240 10% 6%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 142 76% 36%;
+    --primary-foreground: 210 40% 98%;
 
-    --secondary: 217.2 32.6% 17.5%;
+    --secondary: 217 33% 17%;
     --secondary-foreground: 210 40% 98%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
+    --accent: 217 33% 17%;
     --accent-foreground: 210 40% 98%;
 
-    --destructive: 0 62.8% 30.6%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 142 76% 36%;
+
+    --sidebar-background: 240 10% 4%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 142 76% 36%;
+    --sidebar-primary-foreground: 210 40% 98%;
+    --sidebar-accent: 217 33% 17%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 217 33% 17%;
+    --sidebar-ring: 142 76% 36%;
   }
 }
 
@@ -101,5 +111,154 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+
+  /* Mission Control Typography */
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  /* Grid pattern background */
+  .grid-pattern {
+    background-image: 
+      linear-gradient(to right, hsl(var(--panel-border)) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--panel-border)) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  /* Scanline effect */
+  .scanlines::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, 0.1) 2px,
+      rgba(0, 0, 0, 0.1) 4px
+    );
+    pointer-events: none;
+  }
+
+  /* Glowing borders */
+  .glow-green {
+    box-shadow: 0 0 20px hsl(var(--glow-green) / 0.3),
+                inset 0 0 20px hsl(var(--glow-green) / 0.1);
+  }
+
+  .glow-red {
+    box-shadow: 0 0 20px hsl(var(--glow-red) / 0.3),
+                inset 0 0 20px hsl(var(--glow-red) / 0.1);
+  }
+
+  .glow-amber {
+    box-shadow: 0 0 20px hsl(var(--glow-amber) / 0.3),
+                inset 0 0 20px hsl(var(--glow-amber) / 0.1);
+  }
+
+  .glow-blue {
+    box-shadow: 0 0 20px hsl(var(--glow-blue) / 0.3),
+                inset 0 0 20px hsl(var(--glow-blue) / 0.1);
+  }
+
+  /* Terminal cursor blink */
+  @keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+  }
+
+  .cursor-blink::after {
+    content: '_';
+    animation: blink 1s infinite;
+  }
+
+  /* Pulse animation for alerts */
+  @keyframes pulse-glow {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+
+  .pulse-alert {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  /* Status indicator dot */
+  .status-dot {
+    @apply w-2 h-2 rounded-full;
+  }
+
+  .status-dot-critical {
+    @apply bg-destructive;
+    box-shadow: 0 0 8px hsl(var(--status-critical));
+  }
+
+  .status-dot-high {
+    background-color: hsl(var(--status-high));
+    box-shadow: 0 0 8px hsl(var(--status-high));
+  }
+
+  .status-dot-moderate {
+    background-color: hsl(var(--status-moderate));
+    box-shadow: 0 0 8px hsl(var(--status-moderate));
+  }
+
+  .status-dot-low {
+    @apply bg-primary;
+    box-shadow: 0 0 8px hsl(var(--status-low));
+  }
+
+  /* Data panel styling */
+  .data-panel {
+    @apply bg-card border border-border rounded-lg;
+    background: linear-gradient(
+      180deg,
+      hsl(var(--panel-bg)) 0%,
+      hsl(var(--space-dark)) 100%
+    );
+  }
+
+  /* Orbital path styling */
+  .orbital-path {
+    stroke: hsl(var(--glow-blue));
+    stroke-width: 1;
+    fill: none;
+    opacity: 0.6;
+  }
+}
+
+@layer utilities {
+  /* Status colors */
+  .text-status-critical {
+    color: hsl(var(--status-critical));
+  }
+
+  .text-status-high {
+    color: hsl(var(--status-high));
+  }
+
+  .text-status-moderate {
+    color: hsl(var(--status-moderate));
+  }
+
+  .text-status-low {
+    color: hsl(var(--status-low));
+  }
+
+  .bg-status-critical {
+    background-color: hsl(var(--status-critical));
+  }
+
+  .bg-status-high {
+    background-color: hsl(var(--status-high));
+  }
+
+  .bg-status-moderate {
+    background-color: hsl(var(--status-moderate));
+  }
+
+  .bg-status-low {
+    background-color: hsl(var(--status-low));
   }
 }
