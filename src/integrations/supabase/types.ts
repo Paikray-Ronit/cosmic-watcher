@@ -14,7 +14,123 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      alert_history: {
+        Row: {
+          alert_type: string
+          close_approach_date: string | null
+          id: string
+          is_read: boolean | null
+          miss_distance: number | null
+          neo_name: string | null
+          neo_reference_id: string
+          triggered_at: string
+          user_id: string
+        }
+        Insert: {
+          alert_type: string
+          close_approach_date?: string | null
+          id?: string
+          is_read?: boolean | null
+          miss_distance?: number | null
+          neo_name?: string | null
+          neo_reference_id: string
+          triggered_at?: string
+          user_id: string
+        }
+        Update: {
+          alert_type?: string
+          close_approach_date?: string | null
+          id?: string
+          is_read?: boolean | null
+          miss_distance?: number | null
+          neo_name?: string | null
+          neo_reference_id?: string
+          triggered_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      cached_neos: {
+        Row: {
+          data: Json
+          last_updated: string
+          name: string
+          neo_reference_id: string
+        }
+        Insert: {
+          data: Json
+          last_updated?: string
+          name: string
+          neo_reference_id: string
+        }
+        Update: {
+          data?: Json
+          last_updated?: string
+          name?: string
+          neo_reference_id?: string
+        }
+        Relationships: []
+      }
+      profiles: {
+        Row: {
+          created_at: string
+          display_name: string | null
+          id: string
+          preferences: Json | null
+          updated_at: string
+          user_id: string
+          username: string | null
+        }
+        Insert: {
+          created_at?: string
+          display_name?: string | null
+          id?: string
+          preferences?: Json | null
+          updated_at?: string
+          user_id: string
+          username?: string | null
+        }
+        Update: {
+          created_at?: string
+          display_name?: string | null
+          id?: string
+          preferences?: Json | null
+          updated_at?: string
+          user_id?: string
+          username?: string | null
+        }
+        Relationships: []
+      }
+      watched_asteroids: {
+        Row: {
+          alert_distance: number | null
+          alert_enabled: boolean | null
+          created_at: string
+          id: string
+          neo_name: string | null
+          neo_reference_id: string
+          user_id: string
+        }
+        Insert: {
+          alert_distance?: number | null
+          alert_enabled?: boolean | null
+          created_at?: string
+          id?: string
+          neo_name?: string | null
+          neo_reference_id: string
+          user_id: string
+        }
+        Update: {
+          alert_distance?: number | null
+          alert_enabled?: boolean | null
+          created_at?: string
+          id?: string
+          neo_name?: string | null
+          neo_reference_id?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
